@@ -17,7 +17,7 @@
 
 Name:           mingw-qt5-%{qt_module}
 Version:        5.6.0
-Release:        2%{?pre:.%{pre}}%{?snapshot_date:.git%{snapshot_date}.%{snapshot_rev}}%{?dist}
+Release:        3%{?pre:.%{pre}}%{?snapshot_date:.git%{snapshot_date}.%{snapshot_rev}}%{?dist}
 Summary:        Qt5 for Windows - QtQuickControls component
 
 License:        GPLv3 with exceptions or LGPLv2 with exceptions
@@ -124,6 +124,9 @@ find %{buildroot}%{mingw64_prefix} | grep .dll | grep -v .dll.a | sed s@"^%{buil
 
 
 %changelog
+* Fri Feb 03 2017 Jajauma's Packages <jajauma@yandex.ru> - 5.6.0-3
+- Rebuild with GCC 5.4.0
+
 * Thu Sep 01 2016 Martin Bříza <mbriza@redhat.com> - 5.6.0-2
 - Specfile tweaks
 
